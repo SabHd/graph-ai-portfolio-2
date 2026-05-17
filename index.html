@@ -83,7 +83,6 @@
 </head>
 <body class="selection:bg-primary-500 selection:text-white">
 
-
     <!-- Ambient Bright Blue Background Blobs -->
     <div class="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-200/40 rounded-full mix-blend-multiply filter blur-[100px] animate-blob"></div>
@@ -91,21 +90,24 @@
         <div class="absolute top-2/3 left-1/3 w-80 h-80 bg-sky-200/40 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-4000"></div>
     </div>
 
-
     <!-- Navigation Header -->
     <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glassmorphism border-b border-slate-200/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center gap-3">
-                    <div class="h-10 w-10 rounded-xl btn-gradient flex items-center justify-center shadow-lg shadow-primary-500/20">
-                        <span class="text-white font-bold text-lg">SH</span>
+                    <!-- Circular Header Avatar with Initials Fallback -->
+                    <div class="h-10 w-10 rounded-full overflow-hidden border-2 border-primary-300 shadow-md flex items-center justify-center bg-slate-100 flex-shrink-0">
+                        <img src="https://raw.githubusercontent.com/SabHd/graph-ai-portfolio-2/main/Photo_Sabrine%20HAMDI.jpg" 
+                             alt="Dr. Sabrine Hamdi" 
+                             class="w-full h-full object-cover"
+                             onerror="this.style.display='none'; document.getElementById('header-initials').classList.remove('hidden');">
+                        <span id="header-initials" class="hidden text-slate-700 font-bold text-sm">SH</span>
                     </div>
                     <div>
                         <span class="font-bold text-lg tracking-tight block text-slate-800">Dr. Sabrine Hamdi</span>
                         <span class="text-xs text-slate-500 block -mt-1 font-medium">DMD, MPH, PMP</span>
                     </div>
                 </div>
-
 
                 <!-- Desktop Nav -->
                 <nav class="hidden md:flex items-center gap-8">
@@ -114,7 +116,6 @@
                     <a href="#submissions" class="text-sm font-semibold text-slate-600 hover:text-primary-600 transition-colors">Submissions</a>
                     <a href="#skills" class="text-sm font-semibold text-slate-600 hover:text-primary-600 transition-colors">AI & Domain Skills</a>
                 </nav>
-
 
                 <div class="hidden md:flex items-center gap-4">
                     <a href="https://www.linkedin.com/in/sabrine-hamdi/" target="_blank" rel="noopener noreferrer" class="p-2 text-slate-500 hover:text-primary-600 glassmorphism rounded-lg transition-all hover:scale-105">
@@ -125,14 +126,12 @@
                     </a>
                 </div>
 
-
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-primary-600 glassmorphism rounded-lg">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>
         </div>
-
 
         <!-- Mobile Dropdown Nav -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 glassmorphism px-4 pt-4 pb-6 space-y-3">
@@ -150,14 +149,25 @@
         </div>
     </header>
 
-
     <!-- Hero Section -->
     <section class="relative min-h-screen pt-32 pb-20 flex items-center z-10 bg-gradient-to-b from-blue-50/50 via-slate-50 to-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
-               
+                
                 <!-- Left Content -->
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <!-- Circular Hero Avatar with double-ring modern framing -->
+                    <div class="flex justify-center lg:justify-start">
+                        <div class="relative p-1 rounded-full bg-gradient-to-tr from-primary-400 to-secondary-500 shadow-xl shadow-blue-500/10 hover:scale-105 transition-transform duration-300">
+                            <div class="bg-white p-1 rounded-full">
+                                <img src="https://raw.githubusercontent.com/SabHd/graph-ai-portfolio-2/main/Photo_Sabrine%20HAMDI.jpg" 
+                                     alt="Dr. Sabrine Hamdi" 
+                                     class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover"
+                                     onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=256';">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100/80 border border-blue-200/60 text-xs sm:text-sm text-blue-800 font-medium">
                         <span class="flex h-2 w-2 relative">
                             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
@@ -166,17 +176,14 @@
                         <span>Generative AI for Work & Research Portfolio</span>
                     </div>
 
-
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-slate-900">
                         Bridging <span class="text-gradient">Public Health</span> <br>
                         with Generative AI
                     </h1>
 
-
                     <p class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                         Welcome to my professional learning journal. As a medical, public health, and humanitarian specialist, I am leveraging advanced generative AI frameworks to design ethical, automated workflows for global health, research, and crisis response.
                     </p>
-
 
                     <!-- Key Badges -->
                     <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2">
@@ -191,7 +198,6 @@
                         </span>
                     </div>
 
-
                     <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                         <a href="#submissions" class="w-full sm:w-auto px-8 py-4 rounded-xl btn-gradient text-white font-bold shadow-lg shadow-blue-500/20 hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
                             Explore Submissions
@@ -203,13 +209,12 @@
                     </div>
                 </div>
 
-
                 <!-- Right Visual: Course Cohort and Integration Concept -->
                 <div class="lg:col-span-5 relative">
                     <div class="relative w-full max-w-md mx-auto aspect-square rounded-3xl overflow-hidden bg-white/90 border border-blue-100 p-6 flex flex-col justify-between shadow-xl">
                         <!-- Gradient Overlay -->
                         <div class="absolute inset-0 bg-gradient-to-tr from-blue-50/50 to-sky-100/50 opacity-40 z-0"></div>
-                       
+                        
                         <div class="relative z-10 flex items-center justify-between border-b border-slate-100 pb-4">
                             <div class="flex items-center gap-2">
                                 <div class="w-3 h-3 rounded-full bg-red-400"></div>
@@ -218,7 +223,6 @@
                             </div>
                             <span class="text-xs text-slate-400 font-mono">portfolio_status.log</span>
                         </div>
-
 
                         <!-- Visual Representation of Course Work -->
                         <div class="relative z-10 my-6 space-y-4">
@@ -233,7 +237,6 @@
                                 <span class="text-[10px] text-emerald-700 bg-emerald-100/70 px-2.5 py-1 rounded font-semibold">Active</span>
                             </div>
 
-
                             <div class="bg-blue-50/80 p-3.5 rounded-xl border border-blue-100 flex items-center gap-3">
                                 <div class="p-2 rounded-lg bg-indigo-100 text-indigo-700">
                                     <i data-lucide="file-text" class="w-5 h-5"></i>
@@ -244,7 +247,6 @@
                                 </div>
                                 <span class="text-[10px] text-emerald-700 bg-emerald-100/70 px-2.5 py-1 rounded font-semibold">Optimized</span>
                             </div>
-
 
                             <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100 flex items-center gap-3">
                                 <div class="p-2 rounded-lg bg-sky-100 text-sky-700">
@@ -257,7 +259,6 @@
                                 <span class="text-[10px] text-slate-600 bg-slate-200 px-2.5 py-1 rounded font-semibold">Module 5</span>
                             </div>
                         </div>
-
 
                         <!-- Statistics footer -->
                         <div class="relative z-10 grid grid-cols-2 gap-4 border-t border-slate-100 pt-4">
@@ -273,11 +274,9 @@
                     </div>
                 </div>
 
-
             </div>
         </div>
     </section>
-
 
     <!-- About Me Section -->
     <section id="about-me" class="py-24 relative z-10 border-t border-slate-100 bg-white">
@@ -288,9 +287,8 @@
                 <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mt-4 rounded-full"></div>
             </div>
 
-
             <div class="grid lg:grid-cols-12 gap-12 items-start">
-               
+                
                 <!-- Left Details: Achievements & Credentials -->
                 <div class="lg:col-span-4 space-y-6">
                     <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 shadow-sm">
@@ -317,7 +315,6 @@
                         </div>
                     </div>
 
-
                     <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 shadow-sm">
                         <h3 class="font-bold text-lg mb-4 text-slate-800 flex items-center gap-2">
                             <i data-lucide="map-pin" class="w-5 h-5 text-secondary-600"></i> Global Operations
@@ -334,7 +331,6 @@
                     </div>
                 </div>
 
-
                 <!-- Right Details: Bio & Academic Journey -->
                 <div class="lg:col-span-8 space-y-8">
                     <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/60 shadow-sm space-y-6">
@@ -349,14 +345,13 @@
                         </p>
                     </div>
 
-
                     <!-- Timeline / Milestones -->
                     <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/60 shadow-sm">
                         <h3 class="font-bold text-xl text-slate-800 mb-6 flex items-center gap-2">
                             <i data-lucide="graduation-cap" class="w-6 h-6 text-primary-600"></i> Key Achievements & Affiliations
                         </h3>
                         <div class="relative pl-6 border-l-2 border-primary-300 space-y-6">
-                           
+                            
                             <!-- Milestone 1 -->
                             <div class="relative">
                                 <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-primary-500 border-4 border-slate-50"></div>
@@ -364,7 +359,6 @@
                                 <h4 class="font-bold text-slate-800 mt-1">Fulbright Alumni Grants Recipient & Global Health Leader</h4>
                                 <p class="text-sm text-slate-600 mt-1">Actively directing projects in fragile settings, developing disease preparedness frameworks, and leading international development campaigns.</p>
                             </div>
-
 
                             <!-- Milestone 2 -->
                             <div class="relative">
@@ -374,7 +368,6 @@
                                 <p class="text-sm text-slate-600 mt-1">Recognized for outstanding and passionate service in public health, international development, and community mobilization.</p>
                             </div>
 
-
                             <!-- Milestone 3 -->
                             <div class="relative">
                                 <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-sky-500 border-4 border-slate-50"></div>
@@ -383,22 +376,19 @@
                                 <p class="text-sm text-slate-600 mt-1">Published research spanning HPV, ecological paradigms, and communicable disease policy. Using GenAI to speed up literature review methodologies ethically.</p>
                             </div>
 
-
                         </div>
                     </div>
                 </div>
-
 
             </div>
         </div>
     </section>
 
-
     <!-- About Course Section -->
     <section id="about-course" class="py-24 relative z-10 border-t border-slate-100 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
-               
+                
                 <!-- Graphic / Course Features -->
                 <div class="lg:col-span-5 space-y-4">
                     <span class="text-xs font-bold uppercase tracking-widest text-primary-600 block">The Learning Framework</span>
@@ -406,7 +396,6 @@
                     <p class="text-slate-600 leading-relaxed">
                         Offered by <strong>The GRAPH Courses</strong>, this intensive 8-week cohort-based program equips professionals with practical, no-code automated workflows designed to respect academic integrity and maximize day-to-day productivity.
                     </p>
-
 
                     <div class="space-y-4 pt-4">
                         <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200/60 shadow-sm">
@@ -419,7 +408,6 @@
                             </div>
                         </div>
 
-
                         <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200/60 shadow-sm">
                             <div class="p-2 rounded bg-secondary-100 text-secondary-600">
                                 <i data-lucide="zap" class="w-5 h-5"></i>
@@ -431,7 +419,6 @@
                         </div>
                     </div>
                 </div>
-
 
                 <!-- Course Modules / Features -->
                 <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
@@ -446,7 +433,6 @@
                         </div>
                     </div>
 
-
                     <!-- Feature 2 -->
                     <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between hover:border-primary-300 hover:shadow-md transition-all">
                         <div>
@@ -458,7 +444,6 @@
                         </div>
                     </div>
 
-
                     <!-- Feature 3 -->
                     <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between hover:border-primary-300 hover:shadow-md transition-all">
                         <div>
@@ -469,7 +454,6 @@
                             </p>
                         </div>
                     </div>
-
 
                     <!-- Feature 4 -->
                     <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm flex flex-col justify-between hover:border-primary-300 hover:shadow-md transition-all">
@@ -483,11 +467,9 @@
                     </div>
                 </div>
 
-
             </div>
         </div>
     </section>
-
 
     <!-- Weekly Submissions Section -->
     <section id="submissions" class="py-24 relative z-10 border-t border-slate-100 bg-white">
@@ -501,10 +483,9 @@
                 </p>
             </div>
 
-
             <!-- Submission Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-               
+                
                 <!-- Module 1 -->
                 <div class="bg-slate-50 rounded-2xl border-2 border-primary-400 p-6 flex flex-col justify-between hover:scale-[1.02] transition-all relative overflow-hidden group shadow-sm hover:shadow-md">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-primary-100 rounded-full filter blur-xl group-hover:bg-primary-200/50 transition-all"></div>
@@ -534,7 +515,6 @@
                     </button>
                 </div>
 
-
                 <!-- Module 2 -->
                 <div class="bg-slate-50 rounded-2xl border border-slate-200/60 p-6 flex flex-col justify-between hover:scale-[1.02] hover:border-primary-400 hover:shadow-md transition-all relative group shadow-sm">
                     <div class="relative z-10">
@@ -560,7 +540,6 @@
                         View Sandbox Placeholder
                     </button>
                 </div>
-
 
                 <!-- Module 3 -->
                 <div class="bg-slate-50 rounded-2xl border border-slate-200/60 p-6 flex flex-col justify-between hover:scale-[1.02] hover:border-primary-400 hover:shadow-md transition-all relative group shadow-sm">
@@ -588,7 +567,6 @@
                     </button>
                 </div>
 
-
                 <!-- Module 4 -->
                 <div class="bg-slate-50 rounded-2xl border border-slate-200/60 p-6 flex flex-col justify-between hover:scale-[1.02] hover:border-primary-400 hover:shadow-md transition-all relative group shadow-sm">
                     <div class="relative z-10">
@@ -614,7 +592,6 @@
                         View Sandbox Placeholder
                     </button>
                 </div>
-
 
                 <!-- Module 5 -->
                 <div class="bg-slate-50 rounded-2xl border border-slate-200/60 p-6 flex flex-col justify-between hover:scale-[1.02] hover:border-primary-400 hover:shadow-md transition-all relative group shadow-sm">
@@ -642,7 +619,6 @@
                     </button>
                 </div>
 
-
                 <!-- Module 6 -->
                 <div class="bg-slate-50 rounded-2xl border border-slate-200/60 p-6 flex flex-col justify-between hover:scale-[1.02] hover:border-primary-400 hover:shadow-md transition-all relative group shadow-sm">
                     <div class="relative z-10">
@@ -669,11 +645,9 @@
                     </button>
                 </div>
 
-
             </div>
         </div>
     </section>
-
 
     <!-- Skills and AI Stack Section -->
     <section id="skills" class="py-24 relative z-10 border-t border-slate-100 bg-slate-50">
@@ -684,9 +658,8 @@
                 <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mt-4 rounded-full"></div>
             </div>
 
-
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-               
+                
                 <!-- Public Health Competencies -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all">
                     <div class="h-12 w-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 border border-blue-100">
@@ -705,7 +678,6 @@
                         </li>
                     </ul>
                 </div>
-
 
                 <!-- Strategic Management Competencies -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all">
@@ -726,7 +698,6 @@
                     </ul>
                 </div>
 
-
                 <!-- AI Competencies -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all">
                     <div class="h-12 w-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-6 border border-indigo-100">
@@ -746,18 +717,16 @@
                     </ul>
                 </div>
 
-
             </div>
         </div>
     </section>
-
 
     <!-- Connect / Contact Section -->
     <section id="connect" class="py-24 relative z-10 border-t border-slate-100 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-slate-50 p-8 sm:p-12 rounded-3xl border border-slate-200/60 relative overflow-hidden shadow-sm">
                 <div class="absolute -top-12 -right-12 w-48 h-48 bg-primary-100 rounded-full filter blur-2xl"></div>
-               
+                
                 <div class="text-center space-y-4 mb-8">
                     <span class="text-xs font-bold uppercase tracking-wider text-primary-600 block">Collaborate & Connect</span>
                     <h3 class="text-3xl font-extrabold text-slate-900 font-sans">Let's Synthesize Big Projects Together</h3>
@@ -766,14 +735,13 @@
                     </p>
                 </div>
 
-
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <!-- LinkedIn Button -->
                     <a href="https://www.linkedin.com/in/sabrine-hamdi/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl btn-gradient text-white font-bold shadow-lg shadow-blue-500/20 hover:scale-[1.02] transition-all flex items-center justify-center gap-3">
                         <i data-lucide="linkedin" class="w-5 h-5"></i>
                         Connect on LinkedIn
                     </a>
-                   
+                    
                     <!-- Clipboard Option -->
                     <button onclick="triggerCopyMessage()" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold hover:bg-slate-50 transition-all flex items-center justify-center gap-2 shadow-sm">
                         <i data-lucide="copy" class="w-5 h-5"></i>
@@ -781,14 +749,12 @@
                     </button>
                 </div>
 
-
                 <p id="toast" class="text-center text-xs text-emerald-600 mt-4 opacity-0 transition-opacity duration-300 font-bold">
                     Link successfully copied to clipboard!
                 </p>
             </div>
         </div>
     </section>
-
 
     <!-- Footer -->
     <footer class="border-t border-slate-200/80 py-8 relative z-10 bg-slate-50">
@@ -807,7 +773,6 @@
         </div>
     </footer>
 
-
     <!-- Interactive Submissions Modals (Pure CSS & micro-JS) -->
     <div id="modal-container" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
         <div class="bg-white max-w-lg w-full rounded-2xl border border-slate-200 p-6 space-y-4 shadow-2xl relative">
@@ -820,12 +785,10 @@
         </div>
     </div>
 
-
     <!-- Script Module -->
     <script>
         // Init Lucide icons
         lucide.createIcons();
-
 
         // Responsive Mobile Menu
         const mobileBtn = document.getElementById('mobile-menu-btn');
@@ -833,7 +796,6 @@
         mobileBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-
 
         // Sticky Navbar styling on scroll
         const header = document.querySelector('header');
@@ -847,7 +809,6 @@
             }
         });
 
-
         // Copy Clipboard trigger
         function triggerCopyMessage() {
             const urlToCopy = 'https://www.linkedin.com/in/sabrine-hamdi/';
@@ -858,7 +819,6 @@
             document.execCommand('copy');
             document.body.removeChild(dummyInput);
 
-
             // Pop toast alert
             const toast = document.getElementById('toast');
             toast.classList.remove('opacity-0');
@@ -866,7 +826,6 @@
                 toast.classList.add('opacity-0');
             }, 3000);
         }
-
 
         // Project Modals Data Structure
         const submissionsMetadata = {
@@ -908,15 +867,12 @@
             }
         };
 
-
         const modalContainer = document.getElementById('modal-container');
         const modalBody = document.getElementById('modal-body');
-
 
         function openModal(key) {
             const data = submissionsMetadata[key];
             if (!data) return;
-
 
             modalBody.innerHTML = `
                 <div class="space-y-4">
@@ -932,7 +888,7 @@
                     </div>
                 </div>
             `;
-           
+            
             lucide.createIcons();
             modalContainer.classList.remove('hidden');
             setTimeout(() => {
@@ -940,14 +896,12 @@
             }, 10);
         }
 
-
         function closeModal() {
             modalContainer.classList.remove('opacity-100');
             setTimeout(() => {
                 modalContainer.classList.add('hidden');
             }, 300);
         }
-
 
         modalContainer.addEventListener('click', (e) => {
             if (e.target === modalContainer) {
